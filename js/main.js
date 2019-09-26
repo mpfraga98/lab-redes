@@ -3,12 +3,27 @@ let readyBlock = false;
 //Verifica con jquery que el documento cargó y oculta el gif de carga
 $(document).ready(function(){
     $("#loadGif").fadeOut("slow");
+    
     $('.customer-logos').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1200,
     });
+
+    $('.ir-arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
+ 
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+			$('.ir-arriba').slideDown(300);
+		} else {
+			$('.ir-arriba').slideUp(300);
+		}
+	});
 });
 
 
