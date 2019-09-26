@@ -1,8 +1,14 @@
 let readyBlock = false;
 
 //Verifica con jquery que el documento cargó y oculta el gif de carga
-$(document).ready(function() {
-	$("#loadGif").fadeOut("slow");;
+$(document).ready(function(){
+    $("#loadGif").fadeOut("slow");
+    $('.customer-logos').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1200,
+    });
 });
 
 
@@ -15,12 +21,12 @@ $(window).scroll(function(event) {
         readyBlock = true;
     }
 
-    if(scrollTop >= 900 && readyBlock == true){
+    if(scrollTop >= 1040 && readyBlock == true){
         addBlock(2,"l");
         readyBlock = false;
     }
 
-    if(scrollTop >= 1260 && readyBlock == false){
+    if(scrollTop >= 1490 && readyBlock == false){
         addBlock(3,"r");
         readyBlock = true;
     }
@@ -35,3 +41,4 @@ function addBlock(number,side){
         $('#b'+number).addClass('slideInLeft');
     }
 }
+
