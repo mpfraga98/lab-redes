@@ -1,4 +1,4 @@
-var readyBlock = false;
+let readyBlock = false;
 
 //Verifica con jquery que el documento cargó y oculta el gif de carga
 $(document).ready(function() {
@@ -11,17 +11,27 @@ $(window).scroll(function(event) {
     let scrollTop = $(window).scrollTop();
 
     if(scrollTop >= 320 && readyBlock == false){
-        addBlock(1);
+        addBlock(1,"r");
         readyBlock = true;
     }
 
-    if(scrollTop >= 1010 && readyBlock == true){
-        addBlock(2);
-        readyBlock=false;
+    if(scrollTop >= 900 && readyBlock == true){
+        addBlock(2,"l");
+        readyBlock = false;
+    }
+
+    if(scrollTop >= 1260 && readyBlock == false){
+        addBlock(3,"r");
+        readyBlock = true;
     }
 });
 
-function addBlock(number){
+function addBlock(number,side){
     $('#b'+number).css('display','flex');
-    $('#b'+number).addClass('slideInRight');
+
+    if(side === "r"){
+        $('#b'+number).addClass('slideInRight');
+    }else{
+        $('#b'+number).addClass('slideInLeft');
+    }
 }

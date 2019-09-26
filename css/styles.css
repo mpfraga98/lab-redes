@@ -5,7 +5,8 @@
 }
 
 body{
-    background-color: crimson;
+    background: rgb(4,4,4);
+    background: linear-gradient(0deg, rgba(4,4,4,1) 21%, rgba(34,97,195,1) 51%, rgba(45,200,253,1) 95%);
     color:white;
     overflow-x: hidden;
 }
@@ -18,7 +19,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: 999999999;
-    background: url(/images/g1.gif) center no-repeat var(--backgroundGif);
+    background: url(../images/g1.gif) center no-repeat var(--backgroundGif);
 }
 
 /*Navbar*/
@@ -107,15 +108,30 @@ body{
 
 #b1{
     display: none;
-    margin-bottom: 70px;
+    border-bottom: #fff solid 12px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 #b2{
     display: none;
-    margin-bottom: 70px;
+    border-bottom: #fff solid 12px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#b3{
+    display: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footerSection{
     margin-top: 700px;
-    background-color: #272727;
+    background-color: #040404;
+}
+
+.tagA{
+    position: absolute;
+    top:2050px;
 }
